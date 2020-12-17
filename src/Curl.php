@@ -4,6 +4,7 @@ namespace zcl\Curl;
 
 use Curl\Curl as CurlAlias;
 use zcl\Curl\Interfaces\CurlInterface;
+use zcl\Curl\Traits\CurlOptsTrait;
 use zcl\Curl\Traits\CurlRefererTrait;
 use zcl\Curl\Traits\CurlUserAgentTrait;
 use zcl\Curl\Traits\RefererTrait;
@@ -13,6 +14,7 @@ abstract class Curl implements CurlInterface
 {
     use CurlUserAgentTrait, UserAgentTrait;
     use CurlRefererTrait, RefererTrait;
+    use CurlOptsTrait;
 
     /**
      * @var CurlAlias
