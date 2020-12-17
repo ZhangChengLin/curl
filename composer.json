@@ -13,6 +13,11 @@
         "friendsofphp/php-cs-fixer": "^2.17"
     },
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "zcl\\Curl\\": "src"
+        }
+    },
     "authors": [
         {
             "name": "ZhangChengLin",
