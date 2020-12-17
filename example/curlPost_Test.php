@@ -2,8 +2,6 @@
 
 use zcl\Curl\Method\Post\CurlPost;
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
 require_once dirname(__DIR__) . '/src/Interfaces/CurlInterface.php';
 
 require_once dirname(__DIR__) . '/src/Traits/CurlUserAgentTrait.php';
