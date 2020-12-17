@@ -27,6 +27,7 @@ abstract class Curl implements CurlInterface
     {
         self::setCurl();
 
+        // @link https://www.php.net/manual/en/function.curl-setopt.php
         $this->Curl->setOpt(CURLOPT_TIMEOUT_MS, 4000);//设置cURL允许执行的最长毫秒数;
         $this->Curl->setOpt(CURLOPT_DNS_CACHE_TIMEOUT, 1200);//设置在内存中保存DNS信息的时间，默认为120秒。
 
@@ -38,6 +39,7 @@ abstract class Curl implements CurlInterface
 //        $this->Curl->setCookie('key', 'value');
 
         if (isset($RequestMethod) && ($RequestMethod === 'get' || $RequestMethod === 'post')) {
+            // @link https://www.php.net/manual/en/function.curl-setopt.php
             $this->Curl->setUserAgent($_SERVER['HTTP_USER_AGENT']);
             $this->Curl->setReferrer($_SERVER['HTTP_REFERER'] ?? '-');
 
